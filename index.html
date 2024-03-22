@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Impostazione viewport per la responsività -->
+<title>API.ChuckNorris.lapiovr</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Le migliori battute su Chuck Norris</h1>
+</header>
+
+<div class="container">
+  <div class="riquadro-personalizzato">
+    <p>Benvenuti nel sito web creato per generare battute casuali su Chuck Norris, questo sito tramite un bottone premuto fa richiesta ad un API. L'API è basato su Chuck ed è open source, tutti i diritti dell'API li troverete giù nella descrizione insieme al nome del creatore di questo sito web.</p>
+  </div>
+
+  <img src="immagini/chucknorris2.png" alt="" class="immagine">
+
+  <div class="riquadro-personalizzato">
+    <p>Sito API open source: <a href="https://api.chucknorris.io/">link api</a></p>
+    <p>Creatore del sito web: lapiovr. Nome vero: vito alb****</p>
+</div>
+
+<div class="riquadro-bottone">
+  <button id="btnJoke">Ottieni una barzelletta</button>
+  <p id="jokeText"></p>
+</div>
+
+
+<script>
+document.getElementById("btnJoke").addEventListener("click", function() {
+    fetch("https://api.chucknorris.io/jokes/random")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("jokeText").innerText = data.value;
+        })
+        .catch(error => {
+            console.error('Errore durante il recupero della barzelletta:', error);
+        });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Stili per il body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Stili per l'header */
+header {
+  background-color: black;
+  color: red;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Stili per i riquadri */
+.riquadro-personalizzato {
+  background-color: black;
+  color: red;
+  padding: 20px;
+  margin-bottom: 20px; /* Spazio inferiore tra i riquadri */
+  border: 2px solid red;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* Stile per il primo riquadro personalizzato */
+.riquadro-personalizzato:first-child {
+  position: absolute;
+  top: 15%; /* Posizione dall'alto rispetto al contenitore */
+  left: 1%; /* Distanza dal bordo sinistro del contenitore */
+  width: 40%; /* Larghezza del riquadro */
+  height: auto;
+}
+
+/* Stile per il testo all'interno del primo riquadro */
+.riquadro-personalizzato:first-child p {
+  margin: 0;
+}
+
+/* Stile per il secondo riquadro personalizzato */
+.riquadro-personalizzato:nth-of-type(2) {
+  position: absolute;
+  top: 35%; /* Posizione dall'alto rispetto al contenitore */
+  left: 1%; /* Distanza dal bordo sinistro del contenitore */
+  width: 40%; /* Larghezza del riquadro */
+  height: auto;
+}
+
+/* Stile per il testo all'interno del secondo riquadro */
+.riquadro-personalizzato:nth-of-type(2) p {
+  margin: 0;
+}
+
+.riquadro-bottone {
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  width: 50%; /* Larghezza relativa rispetto alla larghezza del contenitore padre */
+  max-width: 500px; /* Larghezza massima del riquadro */
+  height: auto;
+  padding: 20px; /* Spazio interno */
+  border: 2px solid red; /* Bordo */
+  border-radius: 10px; /* Angoli arrotondati */
+  background-color: black; /* Colore di sfondo */
+}
+
+/* stili per l'immagine */
+.immagine {
+  position: absolute;
+  top: 41%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+
+
+
+/* Stili per il bottone */
+#btnJoke {
+  display: block;
+  margin: 0 auto; /* Centra il bottone */
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid red;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#btnJoke:hover {
+  background-color: green;
+}
+
+#jokeText {
+  color: white;
+}
+
+/* Stili per il contenitore */
+.container {
+  max-width: 800px; /* Larghezza massima del contenitore */
+  margin: 0 auto; /* Centra il contenitore */
+  padding: 20px;
+}
+
